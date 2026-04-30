@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>陈理扬 · 作品集</title>
+    <script>
+        // 单页面应用刷新重定向
+        // 将路径保存到 sessionStorage，然后重定向到首页
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        if (path !== '/' && path !== '/index.html') {
+            sessionStorage.setItem('spa-redirect', path + search + hash);
+        }
+        window.location.replace('/' + search + hash);
+    </script>
+</head>
+<body>
+    <p style="text-align: center; padding: 40px; font-family: sans-serif; color: #888;">正在跳转...</p>
+</body>
+</html>
